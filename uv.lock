@@ -16,7 +16,7 @@ resolution-markers = [
     "python_full_version < '3.11'",
 ]
 dependencies = [
-    { name = "caio", version = "0.9.25", source = { registry = "https://pypi.org/simple" } },
+    { name = "caio", version = "0.9.25", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/67/e2/d7cb819de8df6b5c1968a2756c3cb4122d4fa2b8fc768b53b7c9e5edb646/aiofile-3.9.0.tar.gz", hash = "sha256:e5ad718bb148b265b6df1b3752c4d1d83024b93da9bd599df74b9d9ffcf7919b", size = 17943, upload-time = "2024-10-08T10:39:35.846Z" }
 wheels = [
@@ -33,7 +33,7 @@ resolution-markers = [
     "python_full_version >= '3.11' and python_full_version < '3.13'",
 ]
 dependencies = [
-    { name = "caio", version = "0.12.2", source = { registry = "https://pypi.org/simple" } },
+    { name = "caio", version = "0.12.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/14/31/edb06aabd8f8f0b56d659f30800795f40b93cba96be946ce179f6931e3a5/aiofile-3.12.3.tar.gz", hash = "sha256:caa6aa746b5e47e2165f7abd741b6415e49cf4d44fddc0f61844612cc3924d41", size = 21600, upload-time = "2026-08-04T22:59:27.171Z" }
 wheels = [
@@ -777,7 +777,7 @@ wheels = [
 
 [[package]]
 name = "google-ads"
-version = "31.4.0"
+version = "33.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "google-api-core" },
@@ -789,9 +789,9 @@ dependencies = [
     { name = "protobuf" },
     { name = "pyyaml" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/68/2e/c90d8aed68a711b99f0d1aa1e6ed87741a28da73e8f1cb85d6e15faea593/google_ads-31.4.0.tar.gz", hash = "sha256:038e502608afc1e88888e2e4ae367bc7a7878b5c3206910753c6a089f0b463cc", size = 12455947, upload-time = "2026-08-19T14:12:53.79Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6d/61/ff1d9cc3d3d077aa084a586f119072da431c4fccbc27d1e0392415ed5c5b/google_ads-33.0.0.tar.gz", hash = "sha256:d58309f22943b613f66250a231eba677af7963f3cec91e6d11620c7b402058ce", size = 7757994, upload-time = "2026-09-23T21:18:16.222Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/5d/59/27f19973bee9d6ae64e052d20767e2f586067b8237dd935254927f9009b5/google_ads-31.4.0-py3-none-any.whl", hash = "sha256:210a7f6a7b5d40ef544090216dceeb90c9d2e7fba51c72329a690c9e5bb94474", size = 23712034, upload-time = "2026-08-19T14:12:50.698Z" },
+    { url = "https://files.pythonhosted.org/packages/a6/2c/8517e36d4a8086f1a8dc4c2fcff936148d98be3eb2935050d2b5504f9fb4/google_ads-33.0.0-py3-none-any.whl", hash = "sha256:113a679e708779400e7318b202036f0aa0d02b665d78c9b940b58ade26504d63", size = 14720593, upload-time = "2026-09-23T21:18:12.542Z" },
 ]
 
 [[package]]
@@ -814,7 +814,7 @@ dev = [
 requires-dist = [
     { name = "black", marker = "extra == 'dev'" },
     { name = "fastmcp", specifier = ">=3.2.0" },
-    { name = "google-ads", specifier = ">=31.0.0" },
+    { name = "google-ads", specifier = ">=33.0.0" },
     { name = "mcp", extras = ["cli"], specifier = ">=1.2.0" },
     { name = "nox", marker = "extra == 'dev'", specifier = ">=2025.5.1,<2026" },
 ]
@@ -1027,7 +1027,7 @@ name = "importlib-metadata"
 version = "9.0.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "zipp" },
+    { name = "zipp", marker = "python_full_version < '3.13'" },
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/a9/01/15bb152d77b21318514a96f43af312635eb2500c96b55398d020c93d86ea/importlib_metadata-9.0.0.tar.gz", hash = "sha256:a4f57ab599e6a2e3016d7595cfd72eb4661a5106e787a95bcc90c7105b831efc", size = 56405, upload-time = "2026-03-20T06:42:56.999Z" }
 wheels = [
